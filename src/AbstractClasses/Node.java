@@ -4,7 +4,7 @@ public abstract class Node {
     PuzzleBlock puzzleBlock;
     Node node;
 
-    public void setPuzzleBlock(){};
+    public abstract void setPuzzleBlock();
 
 
 

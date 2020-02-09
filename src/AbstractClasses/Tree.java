@@ -4,7 +4,7 @@ public abstract class Tree {
 
     Node node;
 
-    public void addAPuzzleBlock(){};
+    public abstract void addAPuzzleBlock()gi;
 
 
 }
