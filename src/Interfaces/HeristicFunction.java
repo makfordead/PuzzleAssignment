@@ -2,5 +2,5 @@ package Interfaces;
 
 public interface HeristicFunction {
 
-    public Integer getFunctionValue(int[][] arr);
+    public Integer getFunctionValue(Integer[][] arr);
 }

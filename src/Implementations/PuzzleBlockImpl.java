@@ -12,7 +12,7 @@ public class PuzzleBlockImpl extends PuzzleBlock {
 
     @Override
     public WrapperForRowAndColumn getEmptySpace() {
-        int[][] Array = this.getArr();
+        Integer[][] Array = this.getArr();
         for (int i = 0; i < Array.length ; i++) {
             for (int j = 0; j < Array.length; j++) {
                 if(Array[i][j] == -1)
@@ -27,7 +27,7 @@ public class PuzzleBlockImpl extends PuzzleBlock {
 
     @Override
     public void printDetails() {
-        int[][] Array = this.getArr();
+        Integer[][] Array = this.getArr();
         for (int i = 0; i < Array.length; i++) {
             for (int j = 0; j < Array.length; j++) {
                 System.out.print(Array[i][j] + " ");

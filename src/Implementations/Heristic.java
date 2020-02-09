@@ -17,7 +17,7 @@ public class Heristic implements Interfaces.HeristicFunction{
       {12 ,  13, 14, -1}
 };
     
-    public Integer getFunctionValue(int[][] arr){
+    public Integer getFunctionValue(Integer[][] arr){
         int count=0;
         for(int i=0;i<arr.length;i++){
             for(int j=0;j<arr[i].length;j++){

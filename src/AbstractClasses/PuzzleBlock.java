@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public abstract class PuzzleBlock {
-    public int[][] Array;
+    public Integer[][] Array;
     private HeristicFunction heristicFunction;
 
 
@@ -25,15 +25,15 @@ public abstract class PuzzleBlock {
         this.heristicFunction = heristicFunction;
     }
 
-    public int getValue()
+    public int getValue(Integer[][] arr)
     {
-        return heristicFunction.getFunctionValue(this.Array);
+        return heristicFunction.getFunctionValue(arr);
     }
-    public int[][] getArr() {
+    public Integer[][] getArr() {
         return Array;
     }
 
-    public void setArr(int[][] arr) {
+    public void setArr(Integer[][] arr) {
         this.Array = arr;
     }
 }
