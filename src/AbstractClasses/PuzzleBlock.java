@@ -7,12 +7,14 @@ import java.util.LinkedList;
 import java.util.List;
 
 public abstract class PuzzleBlock {
-    private int[][] arr;
+    public int[][] Array;
     private HeristicFunction heristicFunction;
 
 
     public abstract WrapperForRowAndColumn getEmptySpace();
-    public abstract  void printDetails();
+
+    public abstract void printDetails();
+
     public abstract List<Integer[][]> makeAllPossibleMoves();
 
     public HeristicFunction getHeristicFunction() {
@@ -23,12 +25,16 @@ public abstract class PuzzleBlock {
         this.heristicFunction = heristicFunction;
     }
 
+    public int getValue()
+    {
+        return heristicFunction.getFunctionValue(this.Array);
+    }
     public int[][] getArr() {
-        return arr;
+        return Array;
     }
 
     public void setArr(int[][] arr) {
-        this.arr = arr;
+        this.Array = arr;
     }
 }
 
