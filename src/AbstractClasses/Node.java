@@ -1,11 +1,13 @@
 package AbstractClasses;
 
-public abstract class Node {
+public class Node {
     PuzzleBlock puzzleBlock;
     Node node;
 
-    public abstract void setPuzzleBlock();
-
+    public  void setPuzzleBlock(PuzzleBlock puzzleBlock){
+        this.puzzleBlock=puzzleBlock;
+    }
+    
 
 
 }
