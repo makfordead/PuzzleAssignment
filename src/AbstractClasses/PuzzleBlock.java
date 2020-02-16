@@ -1,17 +1,13 @@
 package AbstractClasses;
 
-import Implementations.WrapperForRowAndColumn;
 import Interfaces.HeristicFunction;
 
-import java.util.LinkedList;
 import java.util.List;
 
 public abstract class PuzzleBlock {
     public Integer[][] Array;
     private HeristicFunction heristicFunction;
 
-
-    public abstract WrapperForRowAndColumn getEmptySpace();
 
     public abstract void printDetails();
 

@@ -4,13 +4,12 @@
     <list default="true" id="dbcd0b34-c49e-482e-bb55-2e0604af7726" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -84,6 +83,8 @@
       </file>
     </leaf>
   </component>
+=======
+>>>>>>> c0ce830b745752216e8734567353e42ae2ee936b
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -92,9 +93,16 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>system</find>
+      <find>SYST</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -113,11 +121,19 @@
     <option name="y" value="1" />
     <option name="width" value="1935" />
     <option name="height" value="1038" />
+=======
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1300" />
+    <option name="height" value="1044" />
+>>>>>>> c0ce830b745752216e8734567353e42ae2ee936b
   </component>
   <component name="ProjectId" id="1XNwWc2Gkluh9qi21DtvW4xFtYl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -161,6 +177,8 @@
       <pane id="Scope" />
     </panes>
   </component>
+=======
+>>>>>>> c0ce830b745752216e8734567353e42ae2ee936b
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -169,8 +187,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581260701276" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Fiver150" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581865422765" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> c0ce830b745752216e8734567353e42ae2ee936b
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -180,19 +203,14 @@
       <recent name="$PROJECT_DIR$/src/Implementations" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Code">
+    <configuration name="Code" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Code" />
+      <module name="AIassignmentPuzzle" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="AIassignmentPuzzle" />
@@ -200,8 +218,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Code" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Code" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -231,6 +254,7 @@
     </task>
     <servers />
   </component>
+<<<<<<< HEAD
   <component name="ToolWindowManager">
     <frame x="-7" y="1" width="1548" height="830" extended-state="0" />
     <layout>
@@ -262,6 +286,8 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
+=======
+>>>>>>> c0ce830b745752216e8734567353e42ae2ee936b
   <component name="WindowStateProjectService">
     <state x="313" y="59" width="800" height="684" key="#Project_Structure" timestamp="1580899902597">
       <screen x="70" y="27" width="1296" height="741" />
@@ -283,31 +309,37 @@
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="501" y="155" width="424" height="491" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1581180668146" />
-    <state width="1250" height="172" key="GridCell.Tab.0.bottom" timestamp="1581250944137">
-      <screen x="70" y="27" width="1296" height="741" />
+    <state width="1877" height="276" key="GridCell.Tab.0.bottom" timestamp="1581868864832">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581868864832" />
     <state width="1250" height="172" key="GridCell.Tab.0.bottom/70.27.1296.741@70.27.1296.741" timestamp="1581250944137" />
-    <state width="1250" height="172" key="GridCell.Tab.0.center" timestamp="1581250944136">
-      <screen x="70" y="27" width="1296" height="741" />
+    <state width="1877" height="276" key="GridCell.Tab.0.center" timestamp="1581868864831">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581868864831" />
     <state width="1250" height="172" key="GridCell.Tab.0.center/70.27.1296.741@70.27.1296.741" timestamp="1581250944136" />
-    <state width="1250" height="172" key="GridCell.Tab.0.left" timestamp="1581250944136">
-      <screen x="70" y="27" width="1296" height="741" />
+    <state width="1877" height="276" key="GridCell.Tab.0.left" timestamp="1581868864831">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581868864831" />
     <state width="1250" height="172" key="GridCell.Tab.0.left/70.27.1296.741@70.27.1296.741" timestamp="1581250944136" />
-    <state width="1250" height="172" key="GridCell.Tab.0.right" timestamp="1581250944136">
-      <screen x="70" y="27" width="1296" height="741" />
+    <state width="1877" height="276" key="GridCell.Tab.0.right" timestamp="1581868864831">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581868864831" />
     <state width="1250" height="172" key="GridCell.Tab.0.right/70.27.1296.741@70.27.1296.741" timestamp="1581250944136" />
-    <state x="374" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1581247077569">
-      <screen x="70" y="27" width="1296" height="741" />
+    <state x="450" y="278" key="com.intellij.ide.util.TipDialog" timestamp="1581866268029">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="450" y="278" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581866268029" />
     <state x="374" y="225" key="com.intellij.ide.util.TipDialog/70.27.1296.741@70.27.1296.741" timestamp="1581247077569" />
     <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1581154136826">
       <screen x="70" y="27" width="1296" height="741" />
     </state>
     <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.27.1296.741@70.27.1296.741" timestamp="1581154136826" />
   </component>
+<<<<<<< HEAD
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -367,4 +399,6 @@
       </provider>
     </entry>
   </component>
+=======
+>>>>>>> c0ce830b745752216e8734567353e42ae2ee936b
 </project>
