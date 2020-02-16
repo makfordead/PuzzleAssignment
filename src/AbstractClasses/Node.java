@@ -5,13 +5,19 @@ import Implementations.PuzzleBlockImpl;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Node {
     PuzzleBlock puzzleBlock;
     Node node;
-
     public Node()
+    {
+        this.puzzleBlock= new PuzzleBlockImpl();
+        this.puzzleBlock.setHeristicFunction(new Heristic());
+    }
+
+    public Node(Boolean bool)
     {
         PuzzleBlock puzzleBlock = new PuzzleBlockImpl();
         puzzleBlock.setArr(Node.Random());
@@ -38,7 +44,62 @@ public class Node {
             HeristicValues[i] = temp.getValue(allStates.get(i));
             System.out.println(HeristicValues[i]);
         }
+        Integer Index_to_Include = findMinimumValue(allStates);
+
     }
+    public  Integer findTheIndex(List<Integer[][]> list)
+    {
+        Integer minimumValue = findMinimumValue(list);
+        Integer occurencedOfMinimumValue = findNumberOfMinimumValuesThatOccur(list,minimumValue);
+        List<Integer> index  = findIndexesOfMinimumValue(list, minimumValue);
+        if(occurencedOfMinimumValue > 1)
+        {
+            Collections.shuffle(index);
+            return index.get(0);
+
+        }
+        else
+        {
+            return index.get(0);
+        }
+
+            }
+    public Integer findMinimumValue(List<Integer[][]> list)
+    {
+        Integer minValue= Integer.MAX_VALUE;
+        for (Integer[][] arr: list)
+        {
+            int temp =   this.puzzleBlock.getHeristicFunction().getFunctionValue(arr);
+            if(temp < minValue)
+            {
+                minValue = temp;
+            }
+        }
+        return minValue;
+    }
+    public Integer findNumberOfMinimumValuesThatOccur(List<Integer[][]> list,Integer val)
+    {
+        Integer counter=0;
+        for (Integer[][] arr: list
+             ) {
+            if(this.puzzleBlock.getHeristicFunction().getFunctionValue(arr) == val)
+                counter++;
+        }
+        return counter;
+    }
+    public List<Integer> findIndexesOfMinimumValue(List<Integer[][] >list,Integer val)
+    {
+        List<Integer> indexes = new LinkedList<>();
+        for (int i = 0; i < list.size(); i++) {
+            Integer[][] temp = list.get(i);
+            if(this.puzzleBlock.getHeristicFunction().getFunctionValue(temp)==val)
+                indexes.add(i);
+        }
+        return indexes;
+    }
+
+
+
     public static Integer[][] Random()
     {
         int counter = 0;
