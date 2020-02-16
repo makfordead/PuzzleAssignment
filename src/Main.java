@@ -27,7 +27,7 @@ public class Main {
                 System.out.println();
             }
             System.out.println("____________________________");
-            System.out.println(puzzleBlock.getHeristicFunction().getFunctionValue(temp));
+            System.out.println(puzzleBlock.getHeristicFunction().getAnotherFunction(temp));
             System.out.println("____________________________");
 
         }

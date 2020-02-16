@@ -1,4 +1,5 @@
-package Implementations;/*
+package Implementations;
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -21,8 +22,24 @@ public class Heristic implements Interfaces.HeristicFunction{
         int count=0;
         for(int i=0;i<arr.length;i++){
             for(int j=0;j<arr[i].length;j++){
-                if(arr[i][j]!=goal[i][j])
-                    count++;
+                 if(arr[i][j]!=goal[i][j])
+                     count++;
+                }
+            }
+        return count;
+        }
+
+    public Integer getAnotherFunction(Integer[][] arr){
+        int count=0;
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[i].length;j++){
+                for(int k=0;k<goal.length;k++){
+                    for(int l=0;l<goal[i].length;l++){
+                        if(arr[i][j]==goal[k][l]){
+                            count += Math.abs(k-i) + Math.abs(l-j);
+                        }
+                    }
+                }
             }
         }
         return count;
