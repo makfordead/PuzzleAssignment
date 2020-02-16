@@ -9,23 +9,6 @@ public class PuzzleBlockImpl extends PuzzleBlock {
 
 
 
-
-    @Override
-    public WrapperForRowAndColumn getEmptySpace() {
-        Integer[][] Array = this.getArr();
-        for (int i = 0; i < Array.length ; i++) {
-            for (int j = 0; j < Array.length; j++) {
-                if(Array[i][j] == -1)
-                {
-                    WrapperForRowAndColumn wrapperForRowAndColumn = new WrapperForRowAndColumn(i , j);
-                    return wrapperForRowAndColumn;
-                }
-            }
-        }
-        return null;
-    }
-
-    @Override
     public void printDetails() {
         Integer[][] Array = this.getArr();
         for (int i = 0; i < Array.length; i++) {
