@@ -10,7 +10,7 @@ public class PuzzleBlockImpl extends PuzzleBlock {
 
 
     public void printDetails() {
-        Integer[][] Array = this.getArr();
+        int[][] Array = this.getArr();
         for (int i = 0; i < Array.length; i++) {
             for (int j = 0; j < Array.length; j++) {
                 System.out.print(Array[i][j] + " ");
@@ -20,7 +20,7 @@ public class PuzzleBlockImpl extends PuzzleBlock {
     }
 
     @Override
-    public List<Integer[][]> makeAllPossibleMoves() {
+    public List<int[][]> makeAllPossibleMoves() {
         int empty_row=0;
         int empty_col=0;
 
@@ -34,8 +34,8 @@ public class PuzzleBlockImpl extends PuzzleBlock {
                 }
             }
         }
-        LinkedList<Integer[][]> list = new LinkedList<Integer[][]>();
-        Integer[][] temp= new Integer[Array.length][Array.length];
+        LinkedList<int[][]> list = new LinkedList<int[][]>();
+        int[][] temp= new int[Array.length][Array.length];
         int str;
         try {//move left
             for(int i=0;i<Array.length;i++){
@@ -50,7 +50,7 @@ public class PuzzleBlockImpl extends PuzzleBlock {
         } catch (Exception e) {
             System.out.println("Not possible");
         }
-        temp= new Integer[Array.length][Array.length];
+        temp= new int[Array.length][Array.length];
         try {//move right
             for(int i=0;i<Array.length;i++){
                 for(int j=0;j<Array[i].length;j++){
@@ -64,7 +64,7 @@ public class PuzzleBlockImpl extends PuzzleBlock {
         } catch (Exception e) {
             System.out.println("Not Possible");
         }
-        temp= new Integer[Array.length][Array.length];
+        temp= new int[Array.length][Array.length];
         try {//move up
             for(int i=0;i<Array.length;i++){
                 for(int j=0;j<Array[i].length;j++){
@@ -78,7 +78,7 @@ public class PuzzleBlockImpl extends PuzzleBlock {
         } catch (Exception e) {
             System.out.println("Not possible");
         }
-        temp= new Integer[Array.length][Array.length];
+        temp= new int[Array.length][Array.length];
         try {//move down
             for(int i=0;i<Array.length;i++){
                 for(int j=0;j<Array[i].length;j++){

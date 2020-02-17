@@ -5,13 +5,13 @@ import Interfaces.HeristicFunction;
 import java.util.List;
 
 public abstract class PuzzleBlock {
-    public Integer[][] Array;
+    public int[][] Array;
     private HeristicFunction heristicFunction;
 
 
     public abstract void printDetails();
 
-    public abstract List<Integer[][]> makeAllPossibleMoves();
+    public abstract List<int[][]> makeAllPossibleMoves();
 
     public HeristicFunction getHeristicFunction() {
         return heristicFunction;
@@ -21,15 +21,15 @@ public abstract class PuzzleBlock {
         this.heristicFunction = heristicFunction;
     }
 
-    public int getValue(Integer[][] arr)
+    public int getValue(int[][] arr)
     {
         return heristicFunction.getFunctionValue(arr);
     }
-    public Integer[][] getArr() {
+    public int[][] getArr() {
         return Array;
     }
 
-    public void setArr(Integer[][] arr) {
+    public void setArr(int[][] arr) {
         this.Array = arr;
     }
 }
