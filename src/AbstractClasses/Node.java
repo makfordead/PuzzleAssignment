@@ -331,4 +331,66 @@
                 System.out.println();
             }
         }
+       public static int[][]  getRandomState()
+        {
+            List<int[][]> list = new LinkedList<>();
+
+
+            int[][] temp1 = {                      {0, 1, 2, 3},             {4, -1, 5, 7},             {8, 9, 6, 10},             {12, 13, 14,11}         };
+            int[][] temp2 = {{0, 1, 2, 3}, {4, 9, 5, 7}, {8,-1, 6, 10}, {12, 13, 14,11}};
+            int[][] temp3 = {{0, 1, 2, 3}, {4, 9, 5, 7}, {8,6, 10, -1}, {12, 13, 14,11}};
+
+            int[][] temp4 = {{0,1, 2, 3},{4, 9, -1, 5},{8,6, 10, 7},{12, 13, 14,11}};
+            int[][] temp5 = {{0, 1, 2, 3}, {4, 5, 6, 7}, {8,-1, 9, 10}, {12, 13, 14,11}};
+
+            int[][] temp6 = {{0, 1, 2, 3}, {4, -1, 6, 7}, {8,5, 9, 10}, {12, 13, 14,11}};
+
+            int[][] temp7 = {{0, -1, 2, 3}, {4, 1, 6, 7}, {8,5, 9, 10}, {12, 13, 14,11}};
+            int[][] temp8 = {{-1, 0, 2, 3}, {4, 1, 6, 7},{8,5, 9, 10},{12, 13, 14,11} };
+
+            list.add(temp1);
+            list.add(temp2);
+            list.add(temp3);
+            list.add(temp4);
+            list.add(temp5);
+            list.add(temp6);
+            list.add(temp7);
+            list.add(temp8);
+            Collections.shuffle(list);
+
+
+
+            return list.get(0);
+        }
+public static int[][]  getRandomState()
+        {
+            List<int[][]> list = new LinkedList<>();
+
+
+            int[][] temp1 = {                      {0, 1, 2, 3},             {4, -1, 5, 7},             {8, 9, 6, 10},             {12, 13, 14,11}         };
+            int[][] temp2 = {{0, 1, 2, 3}, {4, 9, 5, 7}, {8,-1, 6, 10}, {12, 13, 14,11}};
+            int[][] temp3 = {{0, 1, 2, 3}, {4, 9, 5, 7}, {8,6, 10, -1}, {12, 13, 14,11}};
+
+            int[][] temp4 = {{0,1, 2, 3},{4, 9, -1, 5},{8,6, 10, 7},{12, 13, 14,11}};
+            int[][] temp5 = {{0, 1, 2, 3}, {4, 5, 6, 7}, {8,-1, 9, 10}, {12, 13, 14,11}};
+
+            int[][] temp6 = {{0, 1, 2, 3}, {4, -1, 6, 7}, {8,5, 9, 10}, {12, 13, 14,11}};
+
+            int[][] temp7 = {{0, -1, 2, 3}, {4, 1, 6, 7}, {8,5, 9, 10}, {12, 13, 14,11}};
+            int[][] temp8 = {{-1, 0, 2, 3}, {4, 1, 6, 7},{8,5, 9, 10},{12, 13, 14,11} };
+
+            list.add(temp1);
+            list.add(temp2);
+            list.add(temp3);
+            list.add(temp4);
+            list.add(temp5);
+            list.add(temp6);
+            list.add(temp7);
+            list.add(temp8);
+            Collections.shuffle(list);
+
+
+
+            return list.get(0);
+        }
     }
