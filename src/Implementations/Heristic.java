@@ -4,6 +4,8 @@ package Implementations;/*
  * and open the template in the editor.
  */
 
+import AbstractClasses.Node;
+
 /**
  *
  * @author umaan

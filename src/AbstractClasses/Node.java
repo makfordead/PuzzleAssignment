@@ -1,5 +1,6 @@
     package AbstractClasses;
 
+    import Implementations.Astar;
     import Implementations.Heristic;
     import Implementations.PuzzleBlockImpl;
 
@@ -10,8 +11,9 @@
 
     public class Node {
         public static int[][] lastState = new int[4][4];
-        PuzzleBlock puzzleBlock;
-        Node node;
+        public PuzzleBlock puzzleBlock;
+        public Node node;
+        public static int depth =0;
 
         public Node() {
 
@@ -31,6 +33,7 @@
                     {4,  9, 10,  11},
                     { 8,  12, 13, 14}
             };
+            check(goal);
             puzzleBlock.setArr(goal);
             System.out.println("END");
             puzzleBlock.setHeristicFunction(new Heristic());
@@ -60,6 +63,7 @@
         }
 
         public void search() {
+            this.puzzleBlock.setHeristicFunction(new Heristic());
             int counter = 0;
             List<int[][]> firstChoices = this.puzzleBlock.makeAllPossibleMoves();
             System.out.println("____________");
@@ -94,39 +98,109 @@
             print(lastState);
             System.out.println("____________");
             while(!temp.isGoalState() )
-           {
+            {
 
-               List<int[][]> choices = temp.puzzleBlock.makeAllPossibleMoves();
-               System.out.println("THE NUMBER OF CHOICES ARE " + choices.size());
-               for (int[][] p:
-                    choices) {print(p);
-                   System.out.println("                    ");
+                List<int[][]> choices = temp.puzzleBlock.makeAllPossibleMoves();
+                System.out.println("THE NUMBER OF CHOICES ARE " + choices.size());
+                for (int[][] p:
+                        choices) {print(p);
+                    System.out.println("                    ");
 
-               }
-               System.out.println("______________________");
-               temp.deletePreviousStateChoices(choices);
-               for (int[][] p:
-                       choices) {print(p);
-                   System.out.println("                    ");
+                }
+                System.out.println("______________________");
+                temp.deletePreviousStateChoices(choices);
+                for (int[][] p:
+                        choices) {print(p);
+                    System.out.println("                    ");
 
-               }
-               System.out.println("after DELETION THE SIZE IS" + choices.size() );
-               int index =findTheIndex(choices);
-               PuzzleBlockImpl newPuzzleBlock = new PuzzleBlockImpl();
-               newPuzzleBlock.setHeristicFunction(new Heristic());
-               newPuzzleBlock.setArr(choices.get(index));
-               Node newNode = new Node();
-               newNode.setPuzzleBlock(newPuzzleBlock);
-               copyTheArray(lastState, temp.puzzleBlock.getArr());
-               temp.node = newNode;
-               temp = temp.node;
+                }
+                System.out.println("after DELETION THE SIZE IS" + choices.size() );
+                int index =findTheIndex(choices);
+                PuzzleBlockImpl newPuzzleBlock = new PuzzleBlockImpl();
+                newPuzzleBlock.setHeristicFunction(new Heristic());
+                newPuzzleBlock.setArr(choices.get(index));
+                Node newNode = new Node();
+                newNode.setPuzzleBlock(newPuzzleBlock);
+                copyTheArray(lastState, temp.puzzleBlock.getArr());
+                temp.node = newNode;
+                temp = temp.node;
+                print(temp.puzzleBlock.getArr());
+                counter ++;
+                System.out.println("THIS IS THE SELECTED StATE ________");
+                print(temp.puzzleBlock.getArr());
+                System.out.println("______________END______________");
+            }
+        }
 
-               print(temp.puzzleBlock.getArr());
-               counter ++;
-               System.out.println("THIS IS THE SELECTED StATE ________");
-               print(temp.puzzleBlock.getArr());
-               System.out.println("______________END______________");
-           }
+        public void search2() {
+            this.puzzleBlock.setHeristicFunction(new Astar());
+            int counter = 0;
+            List<int[][]> firstChoices = this.puzzleBlock.makeAllPossibleMoves();
+            System.out.println("____________");
+            System.out.println("_____________");
+            System.out.println("THE NUMBER OF CHOICES ARE " + firstChoices.size());
+            for (int[][] p:
+                    firstChoices) {print(p);
+                System.out.println("                    ");
+
+            }
+            System.out.println("_____________");
+            System.out.println("_____________");
+
+            int include = this.findTheIndex(firstChoices);
+
+
+            PuzzleBlockImpl newpuzzleBlock = new PuzzleBlockImpl();
+            newpuzzleBlock.setArr(firstChoices.get(include));
+
+
+            newpuzzleBlock.setHeristicFunction(new Astar());
+            Node newnode = new Node();
+            newnode.setPuzzleBlock(newpuzzleBlock);
+            copyTheArray(lastState, this.puzzleBlock.getArr());
+            this.node= newnode;
+
+            Node temp = this.node;
+            System.out.println("_________CHOICE INCLUDED");
+            print(temp.puzzleBlock.getArr());
+            System.out.println("________________");
+            System.out.println("________LAST STATE");
+            print(lastState);
+            System.out.println("____________");
+            while(!temp.isGoalState() )
+            {
+
+                List<int[][]> choices = temp.puzzleBlock.makeAllPossibleMoves();
+                System.out.println("THE NUMBER OF CHOICES ARE " + choices.size());
+                for (int[][] p:
+                        choices) {print(p);
+                    System.out.println("                    ");
+
+                }
+                System.out.println("______________________");
+                temp.deletePreviousStateChoices(choices);
+                for (int[][] p:
+                        choices) {print(p);
+                    System.out.println("                    ");
+
+                }
+                System.out.println("after DELETION THE SIZE IS" + choices.size() );
+                int index =findTheIndex(choices);
+                PuzzleBlockImpl newPuzzleBlock = new PuzzleBlockImpl();
+                newPuzzleBlock.setHeristicFunction(new Astar());
+                newPuzzleBlock.setArr(choices.get(index));
+                Node newNode = new Node();
+                newNode.setPuzzleBlock(newPuzzleBlock);
+                copyTheArray(lastState, temp.puzzleBlock.getArr());
+                temp.node = newNode;
+                temp = temp.node;
+                Node.depth++;
+                print(temp.puzzleBlock.getArr());
+                counter ++;
+                System.out.println("THIS IS THE SELECTED StATE ________");
+                print(temp.puzzleBlock.getArr());
+                System.out.println("______________END______________");
+            }
         }
 
         public boolean isSameAsLastState(int[][] arr) {
